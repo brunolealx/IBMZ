@@ -1,0 +1,36 @@
+C:\Users\PERACIO\.zowe\profiles
+
+zowe profiles create tso-profile meu-tso -a FB3
+account:        FB3
+characterSet:   697
+codePage:       1047
+columns:        80
+logonProcedure: IZUFPROC
+regionSize:     4096
+rows:           24
+
+use
+zowe profiles set-default tso meu-tso
+
+zowe profiles set-default zosmf meu-tso
+
+Warning: The command 'profiles create' is deprecated.
+Recommended replacement: The 'config init' command
+
+
+TESTE ESTES COMANDOS NO SEU DATASET SOURCE. TEM CODIGOS EM REXX NELE
+zowe tso issue command "exec 'z29133.source(somerexx)'" --ssm
+
+depois
+
+zowe tso start as 
+(no meu caso retornou =  Z29133-143-aaciaaai )
+zowe tso send as Z29133-143-aaciaaai --data "exec 'Z29133.source(somerexx)'"
+
+zowe tso send as Z29133-143-aaciaaai --data "exec 'Z29133.source(guessname)'"
+
+zowe zos-files create data-set-vsam "z50534.vsamds" --data-set-organization indexed --size 300 --secondary-space 1 -v zxpm06 --rf 100 --attributes
+
+zowe jobs submit local-file "repro.txt"
+ 
+ 

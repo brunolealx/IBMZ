@@ -1,0 +1,44 @@
+*** MLZ1 ***
+
+1)
+curl -fsSL https://test.docker.com -o test-docker.sh 
+
+2)
+sudo sh test-docker.sh
+
+3)
+sudo usermod -aG docker $USER; newgrp docker
+
+4)
+sudo systemctl start docker
+
+5)
+exec bash 
+
+6)
+docker ps
+
+7)
+sudo iptables -I INPUT -p tcp --dport 38888 -j ACCEPT 
+
+
+8)
+cd etc ; mkdir iptables ; cd iptables; touch rules.v4
+
+9) cria "rules.v4"
+ sudo bash -c "iptables-save > rules.v4"
+ 
+10)
+docker run -p 38888:8888 --name notebook --rm \-v /home/linux1/jupyter:/home/jovyan/shared \-d registry.linuxone.cloud.marist.edu/l1cc/jupyterlab-image-s390x:latest \jupyter lab --ServerApp.token='IBMZXPLORE'
+
+11)
+docker ps
+
+12)
+**colar no navegador ***
+https://148.100.77.99/38888/IBMZXPLORE
+
+13)
+logar o JUPTER COM A SENHA "IBMZXPLORE"
+
+14)
