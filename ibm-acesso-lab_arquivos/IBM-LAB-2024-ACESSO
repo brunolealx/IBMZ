@@ -1,0 +1,19 @@
+The student TSO user IDs and passwords assigned to this class are:
+
+    TSOCA36 / SM7QU7YD
+    
+    LOGIN NO IBM LAB   TSOCA36
+    PASSWD =  SM7QU7YD
+
+ID Resume/Reset Self-Service
+If an ID (guest ID, surrogate ID, TSO ID) 
+for your class is revoked accidentally, you can reset/resume
+ the revoked ID via this
+url http://idss.ilsvpn.ibm.com/cgi/idss
+using this passcode IM6DG6SE7UZ7NK.
+ Use of this tool is an alternative to contact the Help Desk
+for ID resumption and password resets.
+Please note: you must access the link with the browser
+from your landing virtual machine, It is unreachable
+from your local browser. If you experience problems using the tool,
+please contact the Help Desk. 

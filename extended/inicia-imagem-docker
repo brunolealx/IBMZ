@@ -1,0 +1,19 @@
+7 INICIAR A IMAGEM
+Agora o Docker está ativo e a porta de conexão é permitida por meio do firewall, é possível trazer o
+contêiner de experiência do Machine Learning e se preparar para executá-lo.
+A imagem de contêiner é armazenada em um repositório L1CC (também conhecido como registro).
+Anteriormente, seria necessário autenticar para acessar o registro, mas isso não é mais um requisito.
+Agora é possível ativar a instância de contêiner com este comando útil:
+docker run -p 38888:8888 --name notebook --rm \-v /home/linux1/jupyter:/home/jovyan/shared \-d registry.linuxone.cloud.marist.edu/l1cc/jupyterlab-image-s390x:latest \jupyter lab --ServerApp.token='IBMZXPLORE'
+Unable to find image 'registry.linuxone.cloud.marist.edu/l1cc/jupyterlab-image-s390x:latest'
+locally
+latest: Pulling from l1cc/jupyterlab-image-s390x
+0019aa8d746a: Pull complete
+e32119a70bac: Extracting [==============================================>
+ ] 314.7MB/400MB
+29e1aea6097d: Download complete
+6cbc7f9dd8fb: Download complete
+MLZ1|240617-2325
+IBM Z Xplore
+ Copyright IBM 2021-2024
+ [10/20]

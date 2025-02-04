@@ -1,0 +1,2 @@
+ zowe files create pds 'z50534.cob' --data-class spds 
+ 

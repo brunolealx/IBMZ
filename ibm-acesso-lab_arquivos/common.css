@@ -1,0 +1,649 @@
+* {
+	font-size: 0.98em;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin-bottom: 2px;
+}
+
+p {
+	padding: 0px;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 1.2em;
+	border-bottom: 2px solid #264A60;
+	width: 100%;
+	color: #264A60;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 1em;
+	margin-bottom: 2px;
+}
+
+.header {
+	padding: 1px; 
+	padding-left: 60px;
+	font-size: 2em;
+	color: #4178BE;
+}
+
+.datadiv {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.imgdiv {
+	margin-top: 50px;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+
+.title {
+	text-decoration: underline;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0; 
+	margin: 0px 0px 8px 0px;
+}
+
+.sublist {
+	list-style-type: none;
+	padding: 0; 
+	margin: 0px 0px 15px 20px;
+}
+
+.subnumberlist {
+	padding: 0; 
+	margin: 0px 0px 15px 40px;
+}
+
+.leftdiv {
+	float: left;
+	width: 45%;
+	margin: 20px 20px 0px 20px;
+}
+
+.rightdiv {
+	float: left;
+	width: 45%;
+	margin-top: 20px;
+	padding-left: 20px;
+	border-left: 1px solid #111111;
+}
+
+.clear {
+	width: 100%;
+	clear: both;
+}
+
+.pagebreak {
+	width: 100%;
+	clear: both;
+}
+
+@media screen and (min-width: 1186px) {
+
+	.container  {
+		width: auto;
+		margin-left: 100px;
+		margin-top: 0;
+	}
+
+	.coverpageinfo{
+		float: left;
+		width: 60%;
+		margin-top: 10px;
+		margin-right: 20px;
+	}
+
+	.coverpagelogo{
+		float: left;
+		background:url(images/common/classroom3.png) left top; 
+		width: 356px; 
+		height: 300px;
+		background-repeat: no-repeat;
+	}
+
+	.content {
+		padding-left: 10px;
+		padding-right: 30px;
+		width: 1050px;
+	}
+
+	.menu {
+		position: fixed;
+		margin-left: 0px;
+		margin-top: 0px;
+		padding: 10px 0 0px 0;
+		background-color: #152935;
+		height: 100%;
+		text-align: center;
+		width: 100px;
+		z-index: 1;
+	}
+
+	.menu ul {
+		color: #FFFFFF;
+		padding: 30px 0 20px 0;
+		margin: 0 0 0 0;
+		list-style-type: none;
+		background:url(images/common/justify_32.png) center 10px; 
+	   	background-repeat: no-repeat;
+	   	display: block;
+	   	text-align: center;
+	}
+
+	.menu li {
+		color: #9E9494;
+		cursor: pointer;
+	}
+
+	.supportdiv {
+		float: left;
+		/*width: 30%;*/
+		width: 100%;
+		margin-right: 15px;
+		margin-left: 15px;
+		padding-bottom: 20px;
+	}
+
+	.content {
+                padding-left: 10px;
+                padding-right: 30px;
+                width: 1050px;
+        }
+}
+
+@media screen and (max-width: 1185px) {
+
+	.container  {
+		width: auto;
+		margin-left: 100px;
+		margin-top: 0;
+	}
+	.coverpagelogo{
+		display: none;
+	}
+
+	.content {
+		padding-left: 10px;
+		padding-right: 30px;
+		width: auto;
+	}
+
+	.menu {
+		position: fixed;
+		margin-left: 0px;
+		margin-top: 0px;
+		padding: 10px 0 0px 0;
+		background-color: #152935;
+		height: 100%;
+		text-align: center;
+		width: 100px;
+		z-index: 1;
+	}
+
+	.menu ul {
+		color: #000000;
+		padding: 30px 0 20px 0;
+		margin: 0 0 0 0;
+		list-style-type: none;
+		background:url(images/common/justify_32.png) center 10px; 
+	   	background-repeat: no-repeat;
+	   	display: block;
+	   	text-align: center;
+	}
+
+	.menu li {
+		color: #9E9494;
+		cursor: pointer;
+	}
+
+	.supportdiv {
+		float: left;
+		/*width: 25%;*/
+		width: 100%;
+		margin-right: 15px;
+		margin-left: 15px;
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 825px) {
+
+	.container  {
+		width: auto;
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.menu {
+		position: fixed;
+		margin-left: 0px;
+		margin-top: 0px;
+		padding: 0px;
+		background-color: #152935;
+		height: 50px;
+		text-align: center;
+		width: 50px;
+		z-index: 1;
+	}
+
+	.menu:hover{
+		height: 100%;
+		width: 100px;
+	}
+
+	.menu ul:hover > li{
+		display: block;
+	}
+
+	.menu li {
+		color: #9E9494;
+		cursor: pointer;
+		display: none;
+	}
+
+	.menu li:hover {
+		color: #9E9494;
+		cursor: pointer;
+		display: block;
+	}
+
+
+	.menu ul {
+		color: #000000;
+		padding: 30px 0 20px 0;
+		margin: 0 0 0 0;
+		list-style-type: none;
+		background:url(images/common/justify_32.png) 8px 8px; 
+	   	background-repeat: no-repeat;
+	   	display: block;
+	   	text-align: center;
+	}
+
+	.supportdiv {
+		margin-right: 30px;
+		margin-left: 15px;
+		padding-bottom: 20px;
+		float: none;
+		width: auto;
+	}
+}
+
+
+.coverpagetitle {
+	background-color: #4178BE;
+	font-size: 1.3em;
+	text-align: left;
+	color: #FFFFFF;
+	padding: 5px 20px 30px 60px;
+}
+
+.coverpagetitle p {
+	padding: 10px 0px 10px 10px;
+}
+
+.classtitle {
+	font-size: 2em;
+	font-weight: bold;
+	color: #FFD791;
+}
+
+.classdate {
+	font-size: 1em;
+}
+
+#ibmtitle {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#ibmicon { 
+   background:url(images/common/ibm.png) left top; 
+   width: 82px; 
+   height: 39px;
+   background-repeat: no-repeat;
+   margin-right: 20px;
+   display: inline-block;
+}
+
+#ibmiconprint {
+	display: none;
+	position: absolute;
+	margin-left: -100px;
+	margin-top: 7px;
+}
+
+#rlptitle { 
+	margin-top: 11px;
+	display: inline-block;
+	font-weight: bold;
+	vertical-align:middle;
+	font-size: 1.3em;
+	color: #FFFFFF;
+}
+
+.menu p {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #BBBBBB;
+	font-size: 1em;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #9E9494;
+}
+
+.menu li:hover{
+	background-color: #264A60;
+	color: #FFFFFF;
+}
+
+
+table, tr {
+	border-bottom: 1px solid #959595;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+	color: #4178BE;
+	text-align: left;
+	border-bottom: 1px solid #4178BE;
+	padding: 5px;
+}
+
+td {
+	padding: 5px;
+}
+
+.support {
+	background-color: #C7C7C7;
+	overflow: hidden;
+}
+
+.suppor ul {
+	list-style-position: outside;
+}
+
+.support li {
+	display: block;
+}
+.support li:before {
+    content: ">";
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    margin-top: 0px;
+    margin-left: -17px;
+    color: #5A5A5A;
+}
+
+.support h1,h2 {
+	color: #325C80;
+}
+.support h2 {
+	color: #5A5A5A;
+	border-bottom: 2px solid #5A5A5A;
+	width: 100%
+}
+
+@media screen and (max-height: 700px) {
+	.menuTop { 
+	   text-align: center;
+	}
+
+	.menuConnection { 
+	   text-align: center;
+	}
+
+	.menuErrata {
+	   text-align: center;
+	}
+
+	.menuLab { 
+	   text-align: center;
+	}
+
+	.menuSupport { 
+	   text-align: center;
+	}
+
+	.menu li {
+		padding: 5px 2px 5px 2px;
+	}
+
+	.submenu li {
+		padding: 2px 0 2px 0;
+	}
+}
+@media screen and (min-height: 700px) {
+	.menu li {
+		padding: 20px 2px 20px 2px;
+	}
+
+	.menutext{
+		padding-top: 32px;
+		display: block;
+	}
+
+	.menuTop { 
+	   background:url(images/common/home_32.png) center 20px; 
+	   background-repeat: no-repeat;
+	   display: block;
+	   text-align: center;
+	}
+
+	.menuConnection { 
+	   background:url(images/common/network_32.png) center 20px; 
+	   background-repeat: no-repeat;
+	   display: block;
+	   text-align: center;
+	}
+
+
+        .menuErrata {
+           background:url(images/common/document_32.png) center 20px;
+           background-repeat: no-repeat;
+           display: block;
+           text-align: center;
+        }
+
+	.menuLab { 
+	   background:url(images/common/information_32.png) center 20px; 
+	   background-repeat: no-repeat;
+	   display: block;
+	   text-align: center;
+	}
+
+	.menuSupport { 
+	   background:url(images/common/help_32.png) center 20px; 
+	   background-repeat: no-repeat;
+	   display: block;
+	   text-align: center;
+	}
+
+	.submenu li {
+		padding: 2px 0 2px 0;
+	}
+}
+
+
+@media print 
+{
+	.dontprint { 
+		display: none; 
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.header {
+		border-bottom: 2px solid #1c75c8; 
+		padding: 1px; 
+		padding-left: 60px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000000;
+	}
+
+	#ibmiconprint {
+		display: inline-block;
+		position: absolute;
+		margin-left: -100px;
+		margin-top: 6px;
+	}
+
+	.classtitle {
+		font-size: 2em;
+		font-weight: bold;
+		color: #000000;
+		margin-top: 200px;
+		display: block;
+	}
+
+	.classdate {
+		font-size: 1em;
+		margin-top: 50px;
+		display: block;
+	}
+
+	.pagebreak {
+		page-break-after: always;
+		width: 100%;
+		clear: both;
+		float: none;
+		display: block;
+	}
+
+	.datadiv {
+		page-break-inside: avoid;
+	}
+
+
+
+}
+
+.blink {
+     color: red;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear ;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+ /* Style the tabStorage */
+div.tabStorage {
+    overflow: hidden;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* Style the buttons inside the tabStorage */
+div.tabStorage button {
+    background-color: #152935;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 13px;
+    transition: 0.3s;
+	color: #ffffff;
+}
+
+/* Change background color of buttons on hover */
+div.tabStorage button:hover {
+    background-color: #8BBAF7;
+	color: #ffffff;
+}
+
+/* Create an active/current tabStoragelink class */
+div.tabStorage button.active {
+    background-color: #4178BE;
+	color: #ffffff;
+}
+
+/* Style the tabStorage content */
+.tabStorageContent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+}
+
+.tabStorageContent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

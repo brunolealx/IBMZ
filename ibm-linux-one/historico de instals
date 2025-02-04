@@ -1,0 +1,106 @@
+
+1)
+sudo yum install nano
+
+2)
+**servidor apache**
+sudo yum install httpd.s390x
+3)
+sudo apachectl start
+4)
+sudo systemctl enable httpd
+mensagem 
+"Created symlink /etc/systemd/system/multi-user.target.wants
+/httpd.service → /usr/lib/systemd/system/httpd.service."
+
+5)
+sudo apachectl status
+
+mensagem 
+"httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor pre>
+   Active: active (running) since Sat 2024-06-29 17:50:29 EDT; 2min 29s ago
+     Docs: man:httpd.service(8)
+ Main PID: 6709 (httpd)
+   Status: "Running, listening on: port 80"
+    Tasks: 213 (limit: 22107)
+   Memory: 19.4M
+   CGroup: /system.slice/httpd.service
+           ├─6709 /usr/sbin/httpd -DFOREGROUND
+           ├─6710 /usr/sbin/httpd -DFOREGROUND
+           ├─6711 /usr/sbin/httpd -DFOREGROUND
+           ├─6712 /usr/sbin/httpd -DFOREGROUND
+           └─6713 /usr/sbin/httpd -DFOREGROUND
+
+Jun 29 17:50:29 linux-one-z50534 systemd[1]: Starting The Apache HTTP Server.>
+Jun 29 17:50:29 linux-one-z50534 httpd[6709]: AH00558: httpd: Could not relia>
+Jun 29 17:50:29 linux-one-z50534 systemd[1]: Started The Apache HTTP Server.
+"
+
+6)
+cd /var/www/html
+
+7)
+sudo touch index.html
+
+8)
+sudo nano index.html 
+!doctype html> <html> <body> <h1>This is my web page </h1> /<p>...and it just happens to be running on IBM Z hardware!</p> </body> </html>
+
+<salvar> control+o
+
+9) ip -c addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enc1000: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 02:a1:41:88:c9:c1 brd ff:ff:ff:ff:ff:ff
+    inet 148.100.77.99/22 brd 148.100.79.255 scope global noprefixroute enc1000
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a1:41ff:fe88:c9c1/64 scope link 
+       valid_lft forever preferred_lft forever
+       
+10)
+
+sudo systemctl start firewalld
+
+11)
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+12)
+sudo firewall-cmd --reload 
+
+13)
+sudo systemctl enable firewalld 
+
+14)
+sudo tail -f /var/log/httpd/access_log
+
+** baixar game ** vitetris
+15)
+sudo curl -LO https://github.com/vicgeralds/vitetris/archive/v0.58.0.tar.gz 
+
+16)
+sudo tar xvf v0.58.0.tar.gz 
+
+17)
+sudo yum install make gcc
+
+18)
+ cd vitetris-0.58.0
+
+19)
+
+sudo ./configure
+
+20)
+sudo make
+
+20)curl https://zxp-support.mybluemix.net/LNX2 –d email={lealbruno759@gmail.com} 
+
+
+
+

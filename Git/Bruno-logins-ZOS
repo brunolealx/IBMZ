@@ -1,0 +1,45 @@
+
+1. Obtenha suas informações de login
+para zowe/vscode
+
+https://204.90.115.200:10443‭  
+
+Não perca isso (você pode voltar e pegar seu nome de usuário 
+"Z ID" e senha "Z Password" a qualquer momento)
+
+para ambiente Unix:
+login com => ssh z50534@204.90.115.200
+
+Z ID: Z50534
+Z Password:  JUT11LAX
+
+login IBM Linux One = peracio.dias.zos55@gmail.com
+senha =  LinuxOne2024
+
+login linux-virtual ssh -i .ssh/chavez50534.pem linux1@148.100.77.99
+
+User Name:peracio.dias.zos55@gmail.com
+
+servidor [linux1] - Key Pair [ chavez50534 ] IP Adress [ 148.100.77.99 ]
+
+Project Name:peracio.dias.zos55@gmail.com
+
+Time Since Created:0 day 0 hour 25 minutes
+
+Running Time:0 day 0 hour 21 minutes
+
+Flavor ID:cebeede7-44cb-48c1-a610-48d5d3ea9325
+
+Flavor Name:LinuxONE
+
+VCPUS:2
+
+RAM:4096MB
+
+Root Disk:50GB
+
+Attached Disk:n/a
+
+Image ID:271087c0-a773-44bb-a33d-4ed99ed358f5
+
+Image Name:RHEL8.9

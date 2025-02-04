@@ -1,0 +1,79 @@
+
+
+zowe profiles list zosmf-profiles
+
+zowe profiles create tso-profile tso-bruno -a FB3
+/home/peracio/.zowe/profiles/tso/tso-bruno.yaml
+
+account:        FB3
+characterSet:   697
+codePage:       1047
+columns:        80
+logonProcedure: IZUFPROC
+regionSize:     4096
+rows:           24
+
+$ zowe zos-jobs list jobs
+
+
+zowe zos-tso issue command "status" --rfj
+
+zowe tso issue command "exec 'z50534.source(somerexx)'" --ssm
+
+criando um arquivo sequencial chamado 'zoweps'
+zowe zos-files create data-set-sequential z50534.zoweps
+
+deleta o zoweps criado
+zowe zos-files delete zos-file-system "z50534.zoweps" -f
+
+recria zoweps -com atributos especificos
+"--blksize 9600 --lrecl 120 --recfm fb "
+
+zowe zos-files create data-set-sequential z50534.ZOWEPS2 --blksize 9600 --lrecl 120 --recfm fb --ss 15 --attributes
+
+cria um conjunto de dados chmado  'Z50534.VSAMDS'
+zowe zos-files create data-set-vsam "z50534.vsamds" --data-set-organization indexed --size 300 --secondary-space 1 -v zxpm06 --rf 100 --attributes
+
+CRIA UM DATA SET SEQUENCIAL 'VSAMPRNT" PARA GUARDAR DADOS DE EXEMPLO
+zowe zos-files create data-set-sequential z50534.output.vsamprnt --blksize 9600 --lrecl 80 --recfm fb --sz 15 --attributes
+
+SUBMETER  zxp.public.jcl.chkazcli
+se correto saida cc=0
+
+jun/24/24   21:50
+1READY
+ %ZXP$$CHK Z50534   @ACLI
+ processing  Z50534 ACLI
+ HTTP status 00000200
+ HTTP reason OK
+ Response {"userid":"Z50534","challenge_id":"ACLI","status":"CORRECT","greeting":"Congratulations!"}
+ READY
+ END
+ 
+ ;*******************************************************************************************
+ Criar na /home do seu pc um arquivo 'REPRO.TXT' COM AS LINHAS ABAIXO
+ 
+ //REPRO2   JOB  REPROJCL
+//IDCAMS   EXEC PGM=IDCAMS
+//INPUT    DD   DSNAME=ZXP.PUBLIC.SAMPDATA,DISP=SHR
+//SYSPRINT DD   SYSOUT=A
+//SYSIN    DD   *,SYMBOLS=EXECSYS
+     REPRO -
+           INFILE(INPUT) -
+           OUTDATASET(&SYSUID..VSAMDS) -
+           ERRORLIMIT(6)
+/*
+
+ 
+;*******************************************************************************************
+ Criar na /home do seu pc um arquivo 'PRTREPRO.TXT' COM AS LINHAS ABAIXO
+
+//PRTREPRO JOB  REPROJCL
+//STEP1    EXEC PGM=IDCAMS
+//SYSPRINT  DD   SYSOUT=A
+//SYSIN     DD   *
+      PRINT  -
+            INDATASET(Z50534.VSAMDS) -
+            CHAR COUNT(20)
+/*
+

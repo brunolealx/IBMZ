@@ -1,0 +1,7 @@
+pagina: 
+https://linuxone.cloud.marist.edu/#/register?flag=VM
+
+lOGIN Z50534 ou lealbruno759@gmail.com
+senha = LinuxOne2024
+
+

@@ -1,0 +1,11 @@
+To create a LEARNCOBOL profile (and overwrite it if it already exists), issue the following command with
+your system details (using prompt* will prompt you for certain fields and not show input):
+
+zowe profiles create zosmf LEARNCOBOL -- host 192.86.32.250 -- port 10443
+
+-- ru false -- user prompt * -- pass prompt * -- ow
+
+Many profiles can be created for interacting with different z/OSMF instances. If this was not your first
+profile, you will want to set it as the default for the following lab exercises. Issue the following command:
+
+zowe profiles set zosmf LearnCOBOL
